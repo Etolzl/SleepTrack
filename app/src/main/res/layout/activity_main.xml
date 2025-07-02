@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="12dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="8dp">
+
+            <!-- Encabezado moderno -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛌 SleepTrack"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Estado BLE -->
+            <TextView
+                android:id="@+id/tv_ble_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔗 BLE: Desconectado"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Botón BLE moderno -->
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conectar Smartwatch"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1976D2"
+                android:layout_marginBottom="12dp"
+                android:textSize="14sp" />
+
+            <!-- Estado monitoreo -->
+            <TextView
+                android:id="@+id/tv_monitor_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛏️ Monitoreo: Inactivo"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Botón de monitoreo moderno -->
+            <Button
+                android:id="@+id/btn_toggle_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Monitoreo"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#388E3C"
+                android:enabled="false"
+                android:layout_marginBottom="16dp"
+                android:textSize="14sp" />
+
+            <!-- Ritmo cardíaco -->
+            <TextView
+                android:id="@+id/tv_heart_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❤️ Ritmo: -- bpm"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Movimiento -->
+            <TextView
+                android:id="@+id/tv_movement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏃 Movimiento: --"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Calidad del sueño -->
+            <TextView
+                android:id="@+id/tv_sleep_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌙 Sueño: --"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Resultados -->
+            <TextView
+                android:id="@+id/tv_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultados:\n-"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.wear.widget.BoxInsetLayout>
